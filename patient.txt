@@ -1,0 +1,153 @@
+routes/old-web.php:20:Route::get('/patientregistration', 'App\Http\Controllers\PatientRegistrationController@index')->name('patientregistration');
+routes/old-web.php:21:Route::post('/patientregistration', 'App\Http\Controllers\PatientRegistrationController@register');
+routes/old-web.php:35:Route::get('/patientlogin', 'App\Http\Controllers\PatientLoginController@index')->name('patientlogin');
+routes/old-web.php:36:Route::post('/patientloginpage', 'App\Http\Controllers\PatientLoginController@login');
+routes/old-web.php:47:Route::get('/passwordchangepatient', 'App\Http\Controllers\PasswordController@patientchange')->name('passwordchangepatient');
+routes/old-web.php:48:Route::post('/passwordchangepatientsave', 'App\Http\Controllers\PasswordController@patientsave');
+routes/old-web.php:54:Route::get('/patientreset', 'App\Http\Controllers\PasswordController@patientresetindex')->name('patientreset');
+routes/old-web.php:56:Route::post('/patientresetrequest', 'App\Http\Controllers\PasswordController@patientresetrequest');
+config/auth.php:49:        'patient' => [
+config/auth.php:51:            'provider' => 'patients',
+config/auth.php:89:        'patients' => [
+storage/framework/views/561b13f55241d74373cd644a826441864f38e0c5.php:164:                    <!--Accepting new patient instruction-->
+storage/framework/views/561b13f55241d74373cd644a826441864f38e0c5.php:171:                    Step 2) A page is presented that will list patients that have registered to the application.
+storage/framework/views/561b13f55241d74373cd644a826441864f38e0c5.php:174:                    step if you do not recognize a new patient Selecting the red ‘X’ beside their information will
+storage/framework/views/561b13f55241d74373cd644a826441864f38e0c5.php:182:                    the patient and will send it to them in a brief email. Any denied registration requests will
+storage/framework/views/561b13f55241d74373cd644a826441864f38e0c5.php:196:                    Step 2) A page is presented that will list patients that requested to change their password at the
+storage/framework/views/561b13f55241d74373cd644a826441864f38e0c5.php:202:                    so the patient might not be able to login later. <br><br>
+storage/framework/views/561b13f55241d74373cd644a826441864f38e0c5.php:207:                    the patient and will send it to them in a brief email.
+storage/framework/views/0864bd5b32b31b3a73d1a9d9c4fcaacad1b62784.php:1:<!-- this page that when admin need to generate a report for patients -->
+storage/framework/views/0864bd5b32b31b3a73d1a9d9c4fcaacad1b62784.php:198:            <!-- Panel that has the Medications that patients are taken-->
+storage/framework/views/436a54467f849194b3b0aa3110cea5bcfc9fb6f2.php:59:                                onclick="location.href='<?php echo e(route('/patientlogin')); ?>'" type="button"><span><img
+storage/framework/views/436a54467f849194b3b0aa3110cea5bcfc9fb6f2.php:95:                                      href="<?php echo e(url('/patientregistration')); ?>"><img
+storage/framework/views/436a54467f849194b3b0aa3110cea5bcfc9fb6f2.php:102:                                      href="<?php echo e(url('/patientlogin')); ?>"><img
+storage/framework/views/1742f7d8a0bf7903e1c6d684630e0168c5f5674b.php:58:                                onclick="location.href='<?php echo e(route('/patientlogin')); ?>'" type="button"><span><img
+storage/framework/views/1742f7d8a0bf7903e1c6d684630e0168c5f5674b.php:66:                                onclick="location.href='<?php echo e(route('/patientregistration')); ?>'" type="button"><span><img
+storage/framework/views/1742f7d8a0bf7903e1c6d684630e0168c5f5674b.php:68:                                    class="d-inline-block align-right"> Click here to register as a patient</span>
+storage/framework/views/1742f7d8a0bf7903e1c6d684630e0168c5f5674b.php:94:                                      href="<?php echo e(url('/patientregistration')); ?>"><img
+storage/framework/views/1742f7d8a0bf7903e1c6d684630e0168c5f5674b.php:101:                                      href="<?php echo e(url('/patientlogin')); ?>"><img
+storage/framework/views/59e19d0e795ccf43a2dfd6aba78f74db047f6f6f.php:45:                                                  href="<?php echo e(url('/patientregistration')); ?>"><img src="<?php echo e(asset('assets/images/signup.png')); ?>" width="25" height="25" class="d-inline-block align-right">  Sign Up</a></p>
+storage/framework/views/59e19d0e795ccf43a2dfd6aba78f74db047f6f6f.php:50:                                                  href="<?php echo e(url('/patientlogin')); ?>"><img src="<?php echo e(asset('assets/images/key.png')); ?>" width="25" height="25" class="d-inline-block align-right">  Patient Login</a></p>
+storage/framework/views/59e19d0e795ccf43a2dfd6aba78f74db047f6f6f.php:72:            <form style="margin-top: 5%;" method = "POST" action = "<?php echo e(url('/patientloginpage')); ?>">
+storage/framework/views/59e19d0e795ccf43a2dfd6aba78f74db047f6f6f.php:87:                    <p class="text-center h6">Click <a href="<?php echo e(url('/patientreset')); ?>">here</a> to reset your password.
+storage/framework/views/4a0b8d5b9355159451aea1ade7cd260b246b694b.php:88:        <?php if(count($patients) > 0): ?>
+storage/framework/views/4a0b8d5b9355159451aea1ade7cd260b246b694b.php:91:                <p class="text-center h6" style="text-align:center; margin-left: 3cm;margin-top:1cm">Selecting the green check marks will approve new patients and they will be added to the system. </p>
+storage/framework/views/4a0b8d5b9355159451aea1ade7cd260b246b694b.php:177:        <!-- list of new patients requests-->
+storage/framework/views/4a0b8d5b9355159451aea1ade7cd260b246b694b.php:183:            <?php $__currentLoopData = $patients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+storage/framework/views/4a0b8d5b9355159451aea1ade7cd260b246b694b.php:192:            <!-- If there are no new patients, then don't print a list -->
+storage/framework/views/4a0b8d5b9355159451aea1ade7cd260b246b694b.php:193:            <?php if(count($patients) > 0): ?>
+storage/framework/views/4a0b8d5b9355159451aea1ade7cd260b246b694b.php:199:                        <?php $__currentLoopData = $patients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+storage/framework/views/4a0b8d5b9355159451aea1ade7cd260b246b694b.php:225:                    <strong> There are no new registered patients </strong>
+storage/framework/views/4a0b8d5b9355159451aea1ade7cd260b246b694b.php:246:<?php /**PATH /home/minhaj/Desktop/SOET/resources/views/new_patient_registeration.blade.php ENDPATH**/ ?>
+storage/framework/views/b281ff2c21131fc78d1a1dc5a07c4aa751e4bf9f.php:49:                                                  href="<?php echo e(url('/patientregistration')); ?>"><img src="<?php echo e(asset('assets/images/signup.png')); ?>" width="25" height="25" class="d-inline-block align-right"> Sign Up</a></p>
+storage/framework/views/b281ff2c21131fc78d1a1dc5a07c4aa751e4bf9f.php:54:                                                  href="<?php echo e(url('/patientlogin')); ?>"><img src="<?php echo e(asset('assets/images/key.png')); ?>" width="25" height="25" class="d-inline-block align-right"> Patient Login</a></p>
+storage/framework/views/a55771928745dee0f42bd117fe890f34b3052c58.php:88:            <?php if(count($patients) > 0): ?>
+storage/framework/views/a55771928745dee0f42bd117fe890f34b3052c58.php:180:            <?php $__currentLoopData = $patients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+storage/framework/views/a55771928745dee0f42bd117fe890f34b3052c58.php:191:            <?php if(count($patients) > 0): ?>
+storage/framework/views/a55771928745dee0f42bd117fe890f34b3052c58.php:197:                        <?php $__currentLoopData = $patients; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $p): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+storage/framework/views/4b72f9b12c99a75d7812c69c726aea10e7d7528b.php:1:<!-- this page where admins will put info about a patient and a profile summary about him/her-->
+storage/framework/views/4b72f9b12c99a75d7812c69c726aea10e7d7528b.php:114:    <!-- Text box for a patient email that admins will look for -->
+storage/framework/views/4b72f9b12c99a75d7812c69c726aea10e7d7528b.php:126:    <!-- Text box for a patient first name that admins will look for -->
+storage/framework/views/7e327d43c0190a390f8755377502ff78408841d6.php:53:                                  href="<?php echo e(url('/patientregistration')); ?>"><img
+storage/framework/views/7e327d43c0190a390f8755377502ff78408841d6.php:60:                                  href="<?php echo e(url('/patientlogin')); ?>"><img
+storage/framework/views/0acad457a009c720a1ffcc735fc300775298a7b8.php:53:                                                  href="<?php echo e(url('/patientregistration')); ?>"><img src="<?php echo e(asset('assets/images/signup.png')); ?>" width="25" height="25" class="d-inline-block align-right"> Sign Up</a></p>
+storage/framework/views/0acad457a009c720a1ffcc735fc300775298a7b8.php:58:                                                  href="<?php echo e(url('/patientlogin')); ?>"><img src="<?php echo e(asset('assets/images/key.png')); ?>" width="25" height="25" class="d-inline-block align-right"> Patient Login</a></p>
+app/Http/Controllers/ParticipantRegistrationController.php:88:        //$patient->Condition = $conditionValue;
+app/Http/Controllers/ParticipantRegistrationController.php:104:        else if(Auth::guard('patient')->check()){
+app/Http/Controllers/AdminSurveyController.php:91:        //check whether the patient has already submitted the survey on the same day
+app/Http/Controllers/DashboardController.php:33:                return redirect('/passwordchangepatient')->with('message', 'Temporary password detected please change below.');
+app/Http/Controllers/ParticipantProfileSummaryController.php:56:        //if there are no registered patients with the given name/email
+app/Http/Controllers/ParticipantProfileSummaryController.php:63:        //if the patient uses any medications
+app/Http/Controllers/ParticipantProfileSummaryController.php:81:        //if the patient has not submitted any surveys yet
+app/Http/Controllers/ParticipantProfileSummaryController.php:84:        } //if the patient has not submitted any surveys yet and does not use any medications
+app/Http/Controllers/ParticipantProfileSummaryController.php:186:        //if there are no registered patients with the given name
+app/Http/Controllers/ParticipantProfileSummaryController.php:191:        //an array of arrays (each element represents a patient, with an array of the patient's info)
+app/Http/Controllers/SurveyController.php:84:        //check whether the patient has already submitted the survey on the same day
+app/Http/Controllers/ConditionController.php:29:            if (Auth::guard('patient')->check()) {
+app/Http/Controllers/ReportController.php:62:        //finding the patients that match the given filters
+app/Http/Controllers/ReportController.php:64:        //create a query to filter patients from the Patient-Profile table
+app/Http/Controllers/ReportController.php:70:        //if a specific gender is selected (not any), then filter the patients based on the selected option
+app/Http/Controllers/ReportController.php:97:        //get the email, medications, and date of birth of the filtered patients
+app/Http/Controllers/ReportController.php:105:        //if the patient selected 'includes medication', then filter patients based on whether they use ANY (union) of the selected medications
+app/Http/Controllers/ReportController.php:111:            //go over each filtered patient from above (to filter them further based on medication usage)
+app/Http/Controllers/ReportController.php:135:                //check if there are any matches between the medications consumed by this specific patient, and the selected checkboxes
+app/Http/Controllers/ReportController.php:138:                //if there are any matches, then add this patient's email to the list of $matchedPatientsEmails
+app/Http/Controllers/ReportController.php:146:            //if no filtering based on medications is required "None", then get all the previously filtered patients
+app/Http/Controllers/ReportController.php:174:                    //get all the patients that are older or have the same age as the one specified
+app/Http/Controllers/ReportController.php:196:        //Get the responses of the patients that match the required filters
+app/Http/Controllers/ReportController.php:208:        //an array of emails of the selected patients
+app/Http/Controllers/AdminHelpController.php:12://            if (Auth::guard('patient')->check()) {
+app/Http/Controllers/PasswordController.php:31:        //get a list of the patients that submitted a request to reset their password
+app/Http/Controllers/PasswordController.php:69:        //iterate over each returned element in the form, and check whether this patient was accepted or removed
+app/Http/Controllers/PasswordController.php:81:        //for each accepted password-reset request, create a temporary password ("pending" indicates that the patient has not set a permanent password yet)
+app/Http/Controllers/MedicationController.php:16:            if (Auth::guard('patient')->check()) {
+app/Http/Controllers/MedicationController.php:29:            if (Auth::guard('patient')->check()) {
+Binary file resources/views.zip.txt matches
+resources/views/admin_help.blade.php:164:                    <!--Accepting new patient instruction-->
+resources/views/admin_help.blade.php:171:                    Step 2) A page is presented that will list patients that have registered to the application.
+resources/views/admin_help.blade.php:174:                    step if you do not recognize a new patient Selecting the red ‘X’ beside their information will
+resources/views/admin_help.blade.php:182:                    the patient and will send it to them in a brief email. Any denied registration requests will
+resources/views/admin_help.blade.php:196:                    Step 2) A page is presented that will list patients that requested to change their password at the
+resources/views/admin_help.blade.php:202:                    so the patient might not be able to login later. <br><br>
+resources/views/admin_help.blade.php:207:                    the patient and will send it to them in a brief email.
+resources/views/HomePage.blade.php:66:<img src="patient.png" class="rounded mx-auto d-block" alt="Admin Login">
+resources/views/verification.blade.php:1:<!-- this page is for the patient to verify their email post registration This will verify that contact can be made through provided email. -->
+resources/views/verification.blade.php:58:                                  href="{{ url('/patientregistration')}}"><img
+resources/views/verification.blade.php:65:                                  href="{{ url('/patientlogin')}}"><img src="{{asset('assets/images/key.png')}}"
+resources/views/verification.blade.php:87:                <form class="form-container" method="POST" action="{{ url('/patientregistration')}}"
+resources/views/ParticipantSummaryResult.blade.php:1:<!-- this page will show the summary results for a patient-->
+resources/views/new_participant_registeration.blade.php:177:        <!-- list of new patients requests-->
+resources/views/new_participant_registeration.blade.php:192:            <!-- If there are no new patients, then don't print a list -->
+resources/views/new_participant_registeration.blade.php:222:                {{--                <h5 style="margin-left: 277px; color: red">There are no new registered patients </h5>--}}
+resources/views/Registration.blade.php:53:                                  href="{{ url('/patientregistration')}}"><img
+resources/views/Registration.blade.php:60:                                  href="{{ url('/patientlogin')}}"><img
+resources/views/participant_reset.blade.php:1:<!-- this page is for the patient to request a password reset from the administrators. -->
+resources/views/ProfileSummary.blade.php:1:<!-- this page where admins will put info about a patient and a profile summary about him/her-->
+resources/views/ProfileSummary.blade.php:114:    <!-- Text box for a patient email that admins will look for -->
+resources/views/ProfileSummary.blade.php:126:    <!-- Text box for a patient first name that admins will look for -->
+resources/views/ParticipantTemporaryPasswordChange.blade.php:1:<!--Here is a page for changing password for patients when they have to put they a new one with confirming-->
+resources/views/ParticipantTemporaryPasswordChange.blade.php:46:<!-- the form where patient have to change the password-->
+resources/views/survey.blade.php:49:                                              href="{{ url('/passwordchangepatient')}}"><img src="{{asset('assets/images/key.png')}}" width="25" height="25" class="d-inline-block align-right"> Change Password</a></p>
+resources/views/GeneratReport.blade.php:1:<!-- this page that when admin need to generate a report for patients -->
+resources/views/GeneratReport.blade.php:198:            <!-- Panel that has the Medications that patients are taken-->
+Binary file .git/index matches
+vendor/fakerphp/faker/src/Faker/Provider/en_US/Text.php:655:its head impatiently, and walked a little quicker.
+vendor/fakerphp/faker/src/Faker/Provider/en_US/Text.php:1110:This time Alice waited patiently until it chose to speak again. In
+vendor/fakerphp/faker/src/Faker/Provider/en_US/Text.php:1672:The Dormouse shook its head impatiently, and said, without opening its
+vendor/fakerphp/faker/src/Faker/Provider/en_US/Text.php:1973:'Idiot!' said the Queen, tossing her head impatiently; and, turning to
+vendor/fakerphp/faker/src/Faker/Provider/en_US/Text.php:2403:she waited patiently.
+vendor/fakerphp/faker/src/Faker/Provider/en_US/Text.php:2668:'Soles and eels, of course,' the Gryphon replied rather impatiently:
+vendor/fakerphp/faker/src/Faker/Provider/en_US/Text.php:2694:'No, no! The adventures first,' said the Gryphon in an impatient tone:
+vendor/fakerphp/faker/src/Faker/Provider/en_US/Text.php:2753:'Go on with the next verse,' the Gryphon repeated impatiently: 'it
+vendor/fakerphp/faker/src/Faker/Provider/fr_FR/Text.php:539:réconforta le patient avec toutes sortes de bons mots; caresses
+vendor/fakerphp/faker/src/Faker/Provider/fr_FR/Text.php:546:longtemps avant de trouver son étui, son père s'impatienta; elle
+vendor/fakerphp/faker/src/Faker/Provider/fr_FR/Text.php:7774:impatienté.
+vendor/fakerphp/faker/src/Faker/Provider/fr_FR/Text.php:7834:Mais Félicité s'impatientait de le voir tourner ainsi tout autour
+vendor/fakerphp/faker/src/Faker/Provider/fr_FR/Text.php:8077:-- Mais voilà quatre ans que je patiente et que je souffre!... Un
+vendor/fakerphp/faker/src/Faker/Provider/fr_FR/Text.php:9182:impatienté, qui recommandent la Bible!
+vendor/fakerphp/faker/src/Faker/Provider/fr_FR/Text.php:9435:-- Tais-toi! tais-toi! fit-elle impatientée.
+vendor/fakerphp/faker/src/Faker/Provider/fr_FR/Text.php:11305:voyageurs impatientés. Quelques-uns descendaient au bas de la
+vendor/fakerphp/faker/src/Faker/Provider/fr_FR/Text.php:11950:-- Partons-nous? reprit à la fin Léon s'impatientant.
+vendor/fakerphp/faker/src/Faker/Provider/fr_FR/Text.php:13572:-- Justin! cria l'apothicaire, qui s'impatientait.
+vendor/fakerphp/faker/src/Faker/Provider/nl_NL/Text.php:3891:Hij is nu in een gesticht voor zenuwpatienten. Hij is heel rustig. Hij
+database/seeders/DB_Seed.php:139:            'password' => Hash::make('patientOne'),
+database/seeders/DB_Seed.php:155:            'Email' => 'testpatientotwo@test.ca',
+database/seeders/DB_Seed.php:156:            'Password' => Hash::make('patientTwo'),
+database/seeders/DB_Seed.php:209:                          array('Text' => 'How often during the past two weeks have you felt frustrated, impatient, or restless because of your bowel problem?'
+database/seeders/DB_Seed.php:337:                          array('Text' => 'Rate the general well-being of the patient?'
+database/seeders/DB_Seed.php:339:                          array('Text' => 'How would the patient rate their abdominal pain?'
+tests/Feature/PostTest1.php:19:        $response = $this->json('POST', '/profilereport', ["inputEmail" => "testpatientotwo@test.ca",
+tests/Feature/PostTest2.php:19:        $response = $this->json('POST', '/accept', ["TestPatienttwoFirst TestPatientOneLast (testpatientotwo@test.ca)" => "Accept"]);
+tests/Feature/test.md:3:    The path: Route::get('/patientregistration', 'App\Http\Controllers\PatientRegistrationController@index');
+tests/Feature/test.md:4:    The URL in postman: http://127.0.0.1:8000/patientregistration
+tests/Feature/test.md:110:        //finding the patients that match the given filters
+tests/Feature/test.md:193:        //Get the responses of the patients that match the required filters
+tests/Feature/test.md:235:         The path: Route::post('/patientregistration', 'App\Http\Controllers\PatientRegistrationController@register');
+tests/Feature/test.md:314:        The path:Route:post('/patientresetrequest', 'App\Http\Controllers\PasswordController@patientresetrequest');
+tests/Feature/test.md:315:          The URL in postman: http://127.0.0.1:8000/PasswordController@patientresetrequest
+tests/Feature/test.md:384:        Route::post('/patientloginpage', 'App\Http\Controllers\PatientLoginController@login');
+tests/Feature/test.md:385:         The URL in postman: http://127.0.0.1:8000/patientloginpage
+tests/Feature/test.md:389:             "email": "testpatient@test.ca",
+tests/Feature/test.md:390:             "password": "patientPass"
+ChangeLog.txt:15:2021_02_17_000002_create__patient__profile_table.php
+ChangeLog.txt:34:This will seed the DB with surveys with test questions and a test root admin profile and test admin as well as two test patients one that is 
